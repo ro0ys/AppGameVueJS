@@ -32,12 +32,9 @@ export default {
   border: 0.09em solid silver;
   cursor: default;
   border-radius: 10px;
-  height: 110px;
-  width: 80px;
-  font-size: 2em;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 4%;
+  height: 90px;
+  font-size: 1.8em;
+  margin-bottom: 15%;
   padding: auto;
   cursor: pointer;
 }

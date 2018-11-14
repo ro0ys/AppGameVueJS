@@ -1,6 +1,7 @@
 <template>
-  <div class="hello">
+  <div>
     {{msg}}
+    <br><router-link :to="{ name: 'Accueil' }" active-class="active">Retour Accueil</router-link>
   </div>
 </template>
 

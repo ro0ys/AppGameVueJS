@@ -20,6 +20,11 @@ export default new Vuex.Store({
     },
     resetCurrentPair (state) {
       state.currentPair = []
+    },
+    resetStoreMemory (state) {
+      state.currentPair = []
+      state.guesses = 0
+      state.matchedCardIndices = []
     }
   },
   getters: {

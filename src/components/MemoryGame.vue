@@ -1,11 +1,12 @@
 <template>
   <div class="container">
     <div class="row">
-      <span v-for="(card, index) in cards" :key="index">
+      <span class="col-md-1" v-for="(card, index) in cards" :key="index">
         <card @retournerCard="retournerCard" :valeur="card" :idCard="index" :etat="getFeedbackForCard(index)" />
       </span>
     </div>
         <scoreBoard />
+    <router-link :to="{ name: 'Accueil' }" active-class="active">Retour Accueil</router-link><br>
 </div>
 </template>
 
@@ -29,7 +30,7 @@ export default {
   methods: {
     shuffleCard: function () {
       const result = []
-      const size = 21
+      const size = 48
       const candidates = shuffle(SYMBOLS)
       while (result.length < size) {
         const card = candidates.pop()
@@ -41,7 +42,8 @@ export default {
       'incrementGuesses',
       'addCardToCurrentPair',
       'addIndexToMatchedCardIndexes',
-      'resetCurrentPair'
+      'resetCurrentPair',
+      'resetStoreMemory'
     ]),
     retournerCard: function (idCard) {
       if (this.getMatchedCardIndices.length === this.cards.length || this.getMatchedCardIndices.includes(idCard) ||
@@ -81,6 +83,26 @@ export default {
       'getMatchedCardIndices',
       'selectCardFromCurrentPair'
     ])
+  },
+  destroyed: function() {
+    this.resetStoreMemory()
   }
 }
 </script>
+
+<style scoped>
+h1, h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
