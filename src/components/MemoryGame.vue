@@ -84,7 +84,7 @@ export default {
       'selectCardFromCurrentPair'
     ])
   },
-  destroyed: function() {
+  destroyed: function () {
     this.resetStoreMemory()
   }
 }

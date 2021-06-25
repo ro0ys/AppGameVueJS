@@ -24,5 +24,5 @@ export default new Router({
       component: MemoryGame
     }
   ],
-  fallback : false
+  fallback: false
 })
