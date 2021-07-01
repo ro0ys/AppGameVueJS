@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import PenduGame from '@/components/PenduGame'
-import MemoryGame from '@/components/MemoryGame'
+import PenduGame from '@/components/pendu/PenduGame'
+import MemoryGame from '@/components/memory/MemoryGame'
 import Accueil from '@/components/Accueil'
 
 Vue.use(Router)

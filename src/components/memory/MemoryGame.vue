@@ -43,7 +43,7 @@ export default {
       'addCardToCurrentPair',
       'addIndexToMatchedCardIndexes',
       'resetCurrentPair',
-      'resetStoreMemory'
+      'resetStore'
     ]),
     retournerCard: function (idCard) {
       if (this.getMatchedCardIndices.length === this.cards.length || this.getMatchedCardIndices.includes(idCard) ||
@@ -85,7 +85,7 @@ export default {
     ])
   },
   destroyed: function () {
-    this.resetStoreMemory()
+    this.resetStore()
   }
 }
 </script>

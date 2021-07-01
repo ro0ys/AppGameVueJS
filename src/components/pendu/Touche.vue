@@ -4,16 +4,22 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
+
 export default {
   name: 'Touche',
   props: {
-    letter: String,
-    usedLetters: Array
+    letter: String
   },
   methods: {
     isUsed: function () {
-      return this.usedLetters.includes(this.letter)
+      return this.getUsedLetters.includes(this.letter)
     }
+  },
+  computed: {
+    ...mapGetters([
+      'getUsedLetters'
+    ])
   }
 }
 </script>
